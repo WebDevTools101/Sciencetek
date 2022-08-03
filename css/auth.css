@@ -1,0 +1,139 @@
+@font-face{
+  font-family: "ranile";
+  src: url("../../assets/fonts/ranile/ranile-normal.ttf");}
+@font-face{
+  font-family: "ladasan";
+  src: url("../../assets/fonts/ladasan/ladasan.otf");}
+@font-face{
+  font-family: "colombia";
+  src: url("../../assets/fonts/colombia/colombia.ttf");}
+@font-face{
+  font-family: "ranile";
+  src: url("../../assets/fonts/ranile/ranile.ttf");}
+@font-face{
+  font-family: "lemon";
+  src: url("../../assets/fonts/lemon/lemonmilk.otf");}
+@font-face{
+  font-family: "moonglade";
+  src: url("../../assets/fonts/moonglade/moonglade.ttf");}
+@font-face{
+  font-family: "geliat";
+  src: url("../../assets/fonts/geliat/geliat.otf");}
+body,html{
+	height: 100%;
+	background-image: url(../../assets/images/background/sciencetek.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;}
+body{
+	padding-top: 17%;}
+@media screen and (max-width: 1800px) {
+  body {
+    padding-top: 10%;
+  }
+}
+/*Signin styles*/
+.signin-form{
+	height: 380px;
+	width: 440px;
+	background: #ffffff63;
+	padding: 2%;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 13px 4px #25242494;
+	position: absolute;
+    margin: 0 auto;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateX(-50%);}
+.signin-form .signin-card{
+	width: 100%;
+	height: 100%}
+.signin-form .signin-card .signin-title{
+	font-family: ranile;
+	text-align:center;
+	font-size: 30px;}
+.signin-form .signin-card .signin-body{
+	margin-top: 7%}
+/*Checkboxes styles*/
+input[type="checkbox"]{ 
+	display: none;}
+input[type="checkbox"] + label{
+	display: block;
+	font-weight:bold;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;-ms-user-select: none;}
+input[type="checkbox"] + label:last-child{
+	margin-bottom: 0; }
+input[type="checkbox"] + label:before{
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #000;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: .6;
+	-webkit-transition: all .12s,
+	border-color .08s;
+	transition: all .12s,
+	border-color .08s;}
+input[type="checkbox"]:checked + label:before{
+	width: 10px;
+	top: -5px;
+	left: 5px;
+	border-radius: 0;
+	opacity: 1;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);}
+
+
+/*### Pop up Message ###*/
+.message-alert{
+	position: absolute;
+    margin: 0 auto;
+    background: #FFF;
+    z-index: 1;
+    width: 25%;
+    top: 35%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateX(-50%);
+    padding-left: 3rem!important;
+    padding-right: 3rem!important;
+    padding: .5rem!important;
+}
+.animate{
+	-webkit-animation-duration: 3s;animation-duration: 3s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+@-webkit-keyframes fadeIn {
+   	0% {opacity: 0;}
+   	100% {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.message-alert .fail{
+	font-family: 'lemon';
+	color: red;
+}
+.message-alert p{
+	font-family: 'geliat';
+	font-weight: bolder;
+}
